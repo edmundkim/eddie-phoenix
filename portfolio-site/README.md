@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eddie Kim Portfolio Site
 
-## Getting Started
+Public portfolio site for Eddie Kim, built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+The site presents Eddie as a Principal Product Designer and AI Design Lead, with case studies across AutoScout24 search and discovery, AI design leadership, automotive product concepts, and connected mobility.
+
+## Commands
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run lint
+npm run build
+./node_modules/.bin/tsc --noEmit
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run commands from this folder, or use the root scripts from one level up.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Key Files
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/page.tsx` - homepage composition.
+- `components/homepage/content.ts` - selected work data and homepage project ordering.
+- `app/work/*/page.tsx` - case-study pages.
+- `components/case-study/CaseStudy.tsx` - shared case-study layout primitives.
+- `components/SiteFooter.tsx` - global footer.
+- `RESUME.md` - source resume/profile facts.
+- `TONE-OF-VOICE.md` - portfolio copy guidance.
 
-## Learn More
+## Current Routes
 
-To learn more about Next.js, take a look at the following resources:
+- `/`
+- `/work/new-search`
+- `/work/declutter-list-page`
+- `/work/strategic-ai-design-leadership`
+- `/work/daimler-subscription-concept`
+- `/work/smart-connected-car-app`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Editing Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Keep public claims grounded in existing source material.
+- Do not add new metrics or achievements unless Eddie provides the source.
+- Preserve the minimal editorial visual direction.
+- Keep architecture simple and dependency-light.
+- For homepage ordering, remember that `featuredProjects[0]` drives the hero-to-work handoff.
 
-## Deploy on Vercel
+## Verification
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Before pushing visible portfolio changes, run:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run lint
+./node_modules/.bin/tsc --noEmit
+npm run build
+```
+
+When possible, also smoke check the homepage and case-study routes locally.
