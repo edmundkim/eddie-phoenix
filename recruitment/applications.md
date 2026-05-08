@@ -28,7 +28,7 @@ Imported ChatGPT context may use approximate dates such as `Around 2026-05-04` o
 | Parloa | Staff Product Designer, Consumer Experience | Applied | P1 | Before 2026-05-08 | Confirm whether application is submitted and whether there is an active recruiter/process. |  | Berlin office context. Status imported from prior context but needs confirmation. |
 | ElevenLabs | Product Designer | Applied | P1 | Before 2026-05-08 | Wait for response or identify relevant design/recruiting contact. |  | Role level, product area, location, and application date need confirmation. |
 | Linear | Product Designer | Applied | P1 | Before 2026-05-08 | Wait for response; consider portfolio angle around craft, product systems, and clarity. |  | Exact role title/location and application date need confirmation. Company prioritisation ranks Linear as P1. |
-| Intercom | Staff Designer / Staff Product Designer | Preparing | P1 | 2026-05-08 | Decide whether to apply despite Principal rejection; consider targeted outreach before or alongside application. |  | Application not confirmed. Prior context identified possible UK-based AI/product design recruiting contacts. |
+| Intercom | Staff Designer / Staff Product Designer | Applied | P1 | 2026-05-08 | Wait for response; consider targeted follow-up if there is a relevant recruiting or design contact. |  | Reapplied after Principal Product Designer rejection. Keep this Staff application separate from the archived Principal process. Prior context identified possible UK-based AI/product design recruiting contacts. |
 | Mistral AI | Product Designer - Documentation | Researching | P2 | 2026-05-06 | Keep as secondary Mistral option only if better-aligned roles stall. |  | Paris / London / Marseille, on-site. No application confirmed. |
 | Mistral AI | Product Designer - Observability | Researching | P1/P2 | 2026-05-05 | Evaluate only if relocation to Paris is acceptable and role scope has enough seniority/product leverage. |  | Paris, on-site. No application confirmed. Company is P0, but this specific role remains a secondary Mistral option until fit is validated. |
 
@@ -65,7 +65,6 @@ These are the highest-risk uncertainties from the ChatGPT imports so far.
 | ElevenLabs | Exact role title, level, location, and application date. | Needed before tailored follow-up or company note. |
 | Linear | Exact role title/location and application date. | Needed before tailored follow-up or company note. |
 | Mistral AI | Which roles were only researched versus actually applied to. | Avoid duplicate or confusing outreach. |
-| Intercom | Whether Staff Designer application/outreach happens after Principal rejection. | Prevents treating a possible application as active. |
 | AI research targets | Whether Harvey, Legora, Glean, Dust, Langdock, DeepL, and Personio have current open roles. | Old role availability should not be treated as current. |
 | General leads | Whether Booking.com, Zalando, GetYourGuide, Adyen, Q4, Remote, Lovable, and Zest Search have specific roles worth pursuing. | Keep speculative targets from crowding the active pipeline. |
 | Prioritisation tiers | Whether company priority still matches current openings, location, visa, compensation, and company trajectory. | The P0/P1/P2/P3 ranking is useful direction, not fresh market research. |
@@ -83,6 +82,6 @@ Move items here when they are no longer active. Keep the reason short so pattern
 
 | Company | Role | Final status | Closed date | Reason | Notes |
 |---|---|---|---|---|---|
-| Intercom | Principal Product Designer | Rejected | Around 2026-05-08 | Rejected from Principal role. | Separate Staff Designer / Staff Product Designer role remains in Preparing if Eddie chooses to pursue it. |
+| Intercom | Principal Product Designer | Rejected | Around 2026-05-08 | Rejected from Principal role. | Separate Staff Designer / Staff Product Designer application is now active. |
 | Synthesia | Product Designer, Growth / Staff-Principal level | Rejected | Around 2026-05-04 | Rejected. | London relocation was noted as required or likely. Exact role title/level needs confirmation. |
 | n8n | Senior/Staff Product Designer | Rejected | Before 2026-05-08 | Rejected. | Exact rejection date and location/work setup were not retained in imported context. |
