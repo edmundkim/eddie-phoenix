@@ -50,10 +50,9 @@ export default function Hero() {
               id="hero-summary"
               className="homepage-hero-theme-text homepage-type-subhead mt-12 max-w-[20rem] text-[color:var(--hero-summary)] sm:mt-14 sm:max-w-[42rem]"
             >
-              I help teams turn messy product systems into clearer user
-              decisions, measurable marketplace outcomes, and responsible AI
-              patterns that can scale across web and app for a marketplace with
-              over 30M monthly users.
+              I lead search, discovery, and AI design for AutoScout24&apos;s buyer
+              journey, turning complex vehicle data into clearer decisions across
+              web and app for a marketplace with over 30M monthly users.
             </p>
           </div>
 

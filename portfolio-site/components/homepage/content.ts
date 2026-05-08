@@ -23,6 +23,9 @@ export type FeaturedProject = {
   href: string;
   context: string;
   surface: string;
+  role: string;
+  evidence: string;
+  outcome: string;
   summary: string;
   description: string;
   ctaLabel: string;
@@ -61,6 +64,11 @@ export const featuredProjects: FeaturedProject[] = [
     href: "/work/new-search",
     context: "AutoScout24",
     surface: "iOS, Android, desktop web, and mobile web",
+    role: "Lead product designer",
+    evidence:
+      "Shipped redesign, user validation, rollout across core buyer surfaces, confidential conversion impact",
+    outcome:
+      "Improved how buyers express intent across core search surfaces; exact conversion metrics stay confidential.",
     ctaLabel: "Open New Search project",
     summary:
       "Reset search and filters so buyers could express intent more clearly in a marketplace with complex inventory.",
@@ -82,6 +90,11 @@ export const featuredProjects: FeaturedProject[] = [
     href: "/work/declutter-list-page",
     context: "AutoScout24",
     surface: "Desktop web, mobile web, iOS, and Android",
+    role: "Product design lead and UX program partner",
+    evidence:
+      "Shipped redesign, experiment-backed outcome category, confidential lead impact",
+    outcome:
+      "Improved buyer comparison and lead behavior on high-traffic listing surfaces; exact test results stay confidential.",
     ctaLabel: "Open List Card Redesign project",
     summary:
       "Reworked the vehicle list card so buyers could compare key vehicle signals and progress with less cognitive load.",
@@ -104,11 +117,16 @@ export const featuredProjects: FeaturedProject[] = [
     href: "/work/strategic-ai-design-leadership",
     context: "AutoScout24",
     surface: "AI design standards, early product direction, and UX capability building",
+    role: "AI Design Lead",
+    evidence:
+      "Internal framework, team enablement, prototypes, and early product direction",
+    outcome:
+      "Gave teams reusable standards for AI disclosure, control, review, and confidence before scaling AI patterns into product work.",
     ctaLabel: "Open Strategic AI Design Leadership project",
     summary:
-      "Defined reusable decision standards for when AI should be quiet, labelled, explainable, reviewable, or controlled by the user.",
+      "Defined AI interaction standards for disclosure, control, review, and confidence.",
     description:
-      "Owned the Visual AI Framework and AI guidance for UX while shaping safe early product direction and education paths for AI-assisted workflows.",
+      "The framework helped teams expose system limits, protect user agency, and test AI patterns before committing to product direction.",
     image: {
       src: strategicAiMockupHero,
       alt: "Laptop mockup showing an AI communication framework, previewing the Strategic AI Design Leadership case study.",
@@ -125,6 +143,11 @@ export const featuredProjects: FeaturedProject[] = [
     href: "/work/daimler-subscription-concept",
     context: "Daimler Mercedes-Benz · Deloitte Digital",
     surface: "Desktop and mobile web",
+    role: "UX definition lead",
+    evidence:
+      "Concept system, testable flows, and executive alignment",
+    outcome:
+      "Turned a new service model into testable journeys that helped teams align on acquisition, checkout, and lifecycle scope.",
     ctaLabel: "Open Daimler Vehicle Subscription Concept project",
     summary:
       "Defined a greenfield subscription journey to make an unfamiliar service model concrete enough to test and align around.",
@@ -145,6 +168,11 @@ export const featuredProjects: FeaturedProject[] = [
     href: "/work/smart-connected-car-app",
     context: "smart · Deloitte Digital",
     surface: "Native iOS and Android EV companion app",
+    role: "Product design lead",
+    evidence:
+      "Implementation-ready flows, prototypes, testing inputs, and delivery alignment",
+    outcome:
+      "Translated vehicle, backend, and partner constraints into app flows teams could prototype, test, and prepare for delivery.",
     ctaLabel: "Open Smart Connected Car App project",
     summary:
       "Structured a complex EV companion experience across access, status, charging, climate, and remote controls.",

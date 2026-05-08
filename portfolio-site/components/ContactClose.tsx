@@ -29,7 +29,7 @@ export default function ContactClose() {
                 id="contact-heading"
                 className="homepage-type-item-title text-current"
               >
-                Think we vibe?
+                Interested in working together?
               </h2>
             </div>
 
@@ -40,7 +40,8 @@ export default function ContactClose() {
         </a>
 
         <p className="homepage-type-subhead mx-auto mt-8 max-w-2xl text-center text-[color:var(--foreground)]">
-          Open to collaboration and speaking opportunities.
+          Open to Staff/Principal product design roles, AI product work, and
+          selected speaking.
         </p>
 
         <ul className="homepage-type-utility m-0 mt-6 flex list-none flex-wrap justify-center gap-x-6 gap-y-3 p-0">

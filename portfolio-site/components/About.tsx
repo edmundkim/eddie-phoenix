@@ -31,13 +31,11 @@ export default function About() {
 
           <HomepageTextReveal delay="160ms">
             <p className="homepage-type-subhead text-[color:var(--color-muted)]">
-              My work usually starts by clarifying the real product decision. I
-              use research, experiments, and product constraints to make tradeoffs
-              visible, then carry that direction through validation, delivery, and
-              rollout. In practice, that has meant resetting search and intent
-              foundations, simplifying a commercially crowded browse
-              experience, and setting clearer standards for how AI should
-              behave in product.
+              I frame product direction where user needs, business constraints,
+              and technical limits meet. At AutoScout24, that has meant
+              restructuring search taxonomy, testing filter and list-card
+              patterns, aligning platform tradeoffs, and setting standards for
+              AI behavior before teams scale the work.
             </p>
           </HomepageTextReveal>
         </div>

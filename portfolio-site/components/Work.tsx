@@ -18,10 +18,9 @@ function WorkConfidentialityNote() {
         className="mt-12 border-t border-[color:var(--color-line)] pt-6 sm:mt-16"
       >
         <p className="homepage-type-metadata max-w-2xl text-[color:var(--color-muted)] lg:ml-auto lg:max-w-xl">
-          Some metrics and AI product details are generalized or withheld to
-          respect confidentiality, but the case studies show the decision
-          logic, validation methods, and product outcomes I can discuss in
-          interviews.
+          I keep exact metrics and unreleased AI details out of the public site.
+          The case studies show role, launch status, decision logic, validation
+          methods, and outcome categories I can discuss in interviews.
         </p>
       </aside>
     </HomepageTextReveal>
@@ -110,7 +109,7 @@ function WorkProject({
               ariaLabel={project.ctaLabel}
               className="py-1 sm:py-1.5 lg:min-h-[26rem]"
             >
-              <div className="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_18rem] lg:gap-12">
+              <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(18rem,24rem)] lg:gap-12">
                 <div className="min-w-0">
                   <HomepageTextReveal delay="160ms">
                     <div className="max-w-3xl">
@@ -131,12 +130,30 @@ function WorkProject({
                     <div className="max-w-xl space-y-4">
                       <p className="homepage-type-body text-[color:var(--color-muted)]">
                         <span className="font-medium text-[color:var(--foreground)]">
-                          Surface:
+                          Role:
+                        </span>{" "}
+                        {project.role}
+                      </p>
+                      <p className="homepage-type-body text-[color:var(--color-muted)]">
+                        <span className="font-medium text-[color:var(--foreground)]">
+                          Scope:
                         </span>{" "}
                         {project.surface}
                       </p>
                       <p className="homepage-type-body text-[color:var(--color-muted)]">
                         {project.description}
+                      </p>
+                      <p className="homepage-type-body text-[color:var(--color-muted)]">
+                        <span className="font-medium text-[color:var(--foreground)]">
+                          Evidence:
+                        </span>{" "}
+                        {project.evidence}
+                      </p>
+                      <p className="homepage-type-body text-[color:var(--color-muted)]">
+                        <span className="font-medium text-[color:var(--foreground)]">
+                          Outcome:
+                        </span>{" "}
+                        {project.outcome}
                       </p>
                     </div>
                   </HomepageTextReveal>
