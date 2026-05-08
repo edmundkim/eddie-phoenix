@@ -30,6 +30,10 @@ const heroFacts = [
     value: "Greenfield vehicle subscription concept",
   },
   {
+    label: "Timeframe",
+    value: "Two-month concept engagement",
+  },
+  {
     label: "Role",
     value: "Experience Design Lead, Deloitte Digital Germany",
   },
@@ -38,20 +42,23 @@ const heroFacts = [
     value: "Selection through lifecycle management on desktop and mobile web",
   },
   {
+    label: "Status",
+    value: "Pre-launch concept, approved and tested",
+  },
+  {
     label: "Outcome",
-    value:
-      "Approved concept, tested with 7 relevant participants, then moved in-house for the subscription experience",
+    value: "Shared service model and testing findings for MVP definition",
   },
 ];
 
 const decisionCards = [
   {
     title: "Define the full relationship, not just the signup",
-    body: "I scoped the concept from vehicle selection through delivery and lifecycle management so the offer felt like a service, not just a checkout flow. That made the model more concrete for users and more actionable for the client team.",
+    body: "I treated sign-up as the first service moment. The journey connected vehicle selection, configuration, account setup, verification, delivery, Mercedes Me, dealer handoffs, and ongoing management so users and client stakeholders could evaluate one service.",
   },
   {
     title: "Lower the barrier to commitment",
-    body: "The acquisition flow minimised upfront data entry, used a focused step-by-step configuration model, and kept a persistent subscription summary visible during decision-making. I also moved mandatory identity verification until after subscription, deliberately trading earlier certainty for a lower barrier to entry.",
+    body: "The key call was to separate intent from eligibility. Users could understand and choose the subscription first; Daimler could still verify identity before delivery. That reduced early data-entry friction without removing a necessary trust and compliance step.",
   },
   {
     title: "Use testing to tighten high-friction moments",
@@ -68,13 +75,15 @@ export default function DaimlerSubscriptionConceptPage() {
         <CaseStudyHero
           eyebrow="Daimler Mercedes-Benz · Vehicle Subscription Concept"
           title="Daimler Vehicle Subscription Concept"
-          lede="Daimler was exploring a vehicle subscription offer before the model was well understood by consumers or fully defined internally. As a supporting case, this shows how I led UX definition for a two-month concept that made the service clearer from vehicle selection through lifecycle management, gave the client team a more coherent end-to-end model, and surfaced the friction that still needed refinement in user testing."
+          lede="Daimler was exploring a vehicle subscription offer before the model was familiar to consumers or fully defined internally. As a supporting case, this shows how I led UX definition for a two-month concept that helped drivers understand cost, commitment, responsibility, delivery, and post-subscription management before choosing a vehicle or plan."
+          secondaryLede="Best read as an earlier service-design example: I structured an unfamiliar mobility model across acquisition, delivery, and lifecycle management under senior client scrutiny."
           facts={heroFacts}
         />
 
         <CaseStudyFigure
           image={heroMockup}
           alt="Full-width hero mockup showing repeated mobile subscription concept screens from the Daimler vehicle subscription concept."
+          caption="I used the mockups to frame subscription as a service relationship: plan choice, included services, account setup, and ongoing management had to explain the model together."
           sizes="100vw"
           fullBleed
           className="mb-16 sm:mb-20 lg:mb-24"
@@ -89,19 +98,19 @@ export default function DaimlerSubscriptionConceptPage() {
         >
           <CaseStudyProse>
             <p>
-              A subscription service sits awkwardly between ownership, leasing,
-              and a managed service. If the experience could not quickly explain
-              what was included, how commitment worked, and what happened after
-              sign-up, the offer would feel risky before a user ever reached
-              checkout.
+              Drivers had to consider a new way to access a car: more flexible
+              than ownership or leasing, but less familiar than either. Before
+              they could choose a vehicle or plan, they needed clear answers
+              about cost, commitment, responsibility, delivery, and what they
+              would manage after subscribing.
             </p>
             <p>
-              The scope therefore went beyond an acquisition funnel. I had to
-              define a journey that made the model understandable from vehicle
+              The scope went beyond an acquisition funnel. I had to define a
+              journey that made the service understandable from vehicle
               selection through delivery and ongoing management while the
-              business requirements were still evolving. The value was in
-              making an ambiguous service model concrete enough for users,
-              executives, and delivery partners to evaluate together.
+              business requirements were still evolving. I used that journey to
+              give users, executives, and delivery partners one structure to
+              evaluate together.
             </p>
           </CaseStudyProse>
 
@@ -109,7 +118,7 @@ export default function DaimlerSubscriptionConceptPage() {
             label="Scope proof"
             image={flowArtifact}
             alt="High-level Daimler subscription flow showing the acquisition journey, checkout steps, lifecycle management, Mercedes Me management, and dealer management touchpoints."
-            caption="This flow made the acquisition path, lifecycle management, and dealer handoffs concrete enough to evaluate as one service model."
+            caption="I used this flow to connect acquisition, checkout, lifecycle management, Mercedes Me, and dealer handoffs so client teams could discuss service scope and handoff risk together."
             preserveWidthOnSmallScreens
             preservedWidthClassName="min-w-0 sm:min-w-[52rem]"
           />
@@ -143,7 +152,7 @@ export default function DaimlerSubscriptionConceptPage() {
         <CaseStudySection
           eyebrow="Key Decisions"
           title="The most important calls were about clarity and commitment"
-          intro="The strongest part of the work was not surface polish. It was choosing how to make an unfamiliar service legible enough that users could understand it and low-friction enough that they could commit."
+          intro="The strongest part of the work was choosing where users needed clarity, where Daimler needed certainty, and where the flow could reduce friction without hiding responsibility."
         >
           <div className="grid gap-5 2xl:grid-cols-3">
             {decisionCards.map((card) => (
@@ -159,29 +168,31 @@ export default function DaimlerSubscriptionConceptPage() {
             label="Decision proof"
             image={decisionsEvidence}
             alt="Subscription concept screen showing included services, price summary, five-step progression, and a clear call to configure the subscription."
-            caption="The concept kept the offer, included services, and commitment details visible while reducing friction in the path to subscribe."
+            caption="I kept included services, price, step progression, and commitment details visible, then moved identity verification later in the broader flow."
             className="max-w-4xl"
           />
         </CaseStudySection>
 
         <CaseStudySection
           eyebrow="Outcome"
-          title="What changed because of the concept"
-          intro="The work gave Daimler a clearer structure for the service and showed where the model was still creating friction."
+          title="What the concept clarified"
+          intro="The work aligned Daimler around a testable service model and exposed the points that needed refinement before MVP definition."
         >
           <CaseStudyProse>
             <p>
-              User testing with seven relevant participants was light but
-              useful. It validated the overall direction and surfaced specific
-              changes around navigation, payment and review order, policy
-              clarity, step progression, and lifecycle communication.
+              Testing with seven relevant participants was too light to prove
+              market demand. It gave the team useful direction, confirmed that
+              the service structure was understandable enough to continue, and
+              showed where details still broke down.
             </p>
             <p>
-              The concept was approved by the client and helped inform
-              follow-on work that later moved toward an MVP. This phase remained
-              pre-launch, so the clearest consequence is that it turned an
-              ambiguous service idea into a more concrete, testable direction
-              rather than proving market impact.
+              Daimler left with a shared model for acquisition, checkout,
+              delivery, and lifecycle management, plus specific issues to refine
+              around navigation, payment and review order, policy visibility,
+              step progression, and post-sign-up communication. Because this
+              phase remained pre-launch, the strongest claim is validated
+              learning: a shared acquisition-to-lifecycle model, concrete
+              refinements, and a clearer path into MVP definition.
             </p>
           </CaseStudyProse>
 
@@ -189,7 +200,7 @@ export default function DaimlerSubscriptionConceptPage() {
             label="Validation evidence"
             image={outcomeEvidence}
             alt="Testing summary slide showing the six subscription scenarios, overall task completion, and difficulty markers from participant validation."
-            caption="Testing showed the direction was understandable overall while still exposing friction in navigation and step clarity."
+            caption="Testing covered six scenarios and showed where users still needed clearer navigation, step progression, and lifecycle communication."
             className="max-w-4xl"
           />
         </CaseStudySection>
@@ -197,6 +208,7 @@ export default function DaimlerSubscriptionConceptPage() {
         <CaseStudyFigure
           image={closingMockup}
           alt="Full-width closing mockup showing the Daimler subscription lifecycle dashboard concept."
+          caption="In the lifecycle dashboard concept, drivers could see the status, account, and vehicle-management surfaces they would need after checkout."
           sizes="100vw"
           fullBleed
           className="mt-8"

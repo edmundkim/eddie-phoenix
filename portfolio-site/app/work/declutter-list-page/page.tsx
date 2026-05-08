@@ -26,14 +26,14 @@ import mwebBefore from "../../../content/case-studies/declutter-LP/assets/declut
 export const metadata: Metadata = {
   title: "Declutter the List Page | Eddie Kim",
   description:
-    "Case study on simplifying AutoScout24's list-page card across web and app while balancing browsing clarity, commercial constraints, imagery, and rollout quality.",
+    "Case study on redesigning AutoScout24's list-page card as a high-traffic marketplace decision surface across web and app.",
 };
 
 const heroFacts = [
   {
     label: "Outcome",
     value:
-      "Validated through testing and analysis across buyer progression and enquiry behaviour",
+      "Rolled out after validation across buyer progression, partner, and platform tradeoffs",
   },
   { label: "Company", value: "AutoScout24" },
   {
@@ -44,17 +44,17 @@ const heroFacts = [
 ];
 
 const whyItMattered = [
-  "The list card shapes what buyers notice, what they open, and how quickly they can compare offers.",
-  "It also sits upstream of high-value browsing, enquiry, and commercial entry points.",
-  "Multiple teams had legitimate claims on limited card space, so simplification meant deprioritising something.",
-  "That made the work a marketplace prioritisation problem: decide what the card most needed to do, then defend those choices with evidence.",
+  "Buyers used the card to decide which vehicles deserved a closer look.",
+  "Dealer, partner, and media teams also needed the same space to carry commercial signals.",
+  "Reducing clutter meant making explicit choices about which signals stayed visible, moved, or lost prominence.",
+  "The work mattered because small hierarchy changes on a high-traffic marketplace surface could affect progression, enquiries, and partner outcomes.",
 ];
 
 const roleDetails = [
   {
     title: "What I directly drove",
     items: [
-      "Reframed the brief from visual clutter to decision quality on the list page",
+      "Reframed the brief from card cleanup to scarce attention and buyer progression",
       "Led concept exploration and validation planning across information density, commercial entry points, and image behaviour",
       "Translated research and measurement signals into concrete web and app recommendations",
       "Supported delivery, QA, and rollout decisions with product and engineering partners",
@@ -73,42 +73,79 @@ const roleDetails = [
 const keyDecisions = [
   {
     title: "Back the stronger simplification",
-    body: "Early validation showed the more reduced direction was worth pursuing. That shifted the discussion from visual preference to product judgment: how far could we simplify the card while preserving the signals buyers and the business still needed?",
+    body: "Early mWeb testing favoured the more reduced card direction. That gave the team a reason to keep simplifying while testing which comparison and commercial signals still needed space.",
   },
   {
     title: "Treat commercial entry points as product tradeoffs",
-    body: "Once declutter helped core browsing signals, the harder question became how much space adjacent commercial surfaces should keep. The card could not optimise every buyer and business need equally, so each entry point had to earn its prominence.",
+    body: "Dealer, finance, insurance, and media goals could not all receive equal prominence. Partner links, touch targets, and placement had to prove their value against scanability and buyer progression.",
   },
   {
     title: "Trust actual progression over flattering proxies",
-    body: "Follow-up validation exposed a measurement trap: richer on-card interaction could make engagement look healthier without clearly improving meaningful progression. That changed the decision from 'this feels richer' to 'which measure best reflects real buyer progress?'",
+    body: "Follow-up validation exposed a measurement trap: richer on-card interaction could look healthy in proxy metrics while weakening actual detail-page progression. The team treated actual progression as the stronger decision signal.",
   },
   {
     title: "Let platforms diverge when the evidence diverged",
-    body: "The programme did not support one universal card. Web and native apps needed different balances of image emphasis, detail, and action density while still following the same product principles.",
+    body: "Web and native apps needed different balances of image emphasis, detail, and action density. The final direction kept shared product principles without forcing one card pattern across every surface.",
+  },
+];
+
+const decisionFlow = [
+  {
+    decision: "Declutter level",
+    evidence: "Early mWeb testing favoured the more reduced direction.",
+    tradeoff: "Less density risked removing useful comparison context.",
+    call: "Continue with stronger simplification and test the commercial side effects.",
+  },
+  {
+    decision: "Partner links",
+    evidence: "Declutter improved core signals, but partner outcomes diverged.",
+    tradeoff:
+      "No-links protected card focus; with-links protected insurance outcomes better.",
+    call: "Iterate placement, touch targets, and finance treatment instead of treating the first positive result as final.",
+  },
+  {
+    decision: "Gallery behaviour",
+    evidence:
+      "Users wanted richer imagery, but desktop validation showed gallery could weaken actual progression.",
+    tradeoff:
+      "More preview could keep users interacting on-card instead of opening detail.",
+    call: "Use No Gallery on web surfaces and keep a different image balance in apps.",
+  },
+  {
+    decision: "Measurement",
+    evidence: "Reported DPVs and actual DPVs told different stories.",
+    tradeoff:
+      "Proxy engagement could reward interaction without proving buyer progress.",
+    call: "Prioritise actual progression when deciding rollout direction.",
   },
 ];
 
 const confirmedOutcomes = [
   {
-    label: "Measured signal",
-    metric: "Positive signal",
-    summary: "the more reduced direction moved progression signals in the right direction",
-    body: "Early A/B testing gave the team confidence to keep pushing the simpler direction while continuing to validate the commercial tradeoffs around the card.",
+    label: "Early validation",
+    metric: "Stronger simplification held up",
+    summary: "mWeb tests favoured the more reduced card direction",
+    body: "The signal was strong enough to keep simplifying, but it also exposed finance, partner, and media tradeoffs for later iteration.",
   },
   {
-    label: "Decision quality",
-    metric: "Progression signal",
-    summary: "follow-up validation favoured a simpler web treatment",
-    body: "Later analysis showed that richer on-card interaction could look healthy in proxy metrics without clearly improving meaningful progression. That pushed the team toward a simpler web approach and a different app balance.",
+    label: "Platform decision",
+    metric: "No universal card",
+    summary: "desktop validation made No Gallery the safer web direction",
+    body: "Richer on-card interaction could weaken actual detail-page progression, so web and app surfaces kept different balances of imagery and information.",
+  },
+  {
+    label: "Rollout",
+    metric: "Shipped across markets",
+    summary: "the programme moved from experiment stream into rollout",
+    body: "The public case keeps all-market post-rollout impact generalized because the retained evidence is stronger on validation and rollout direction than exact final measurement.",
   },
 ];
 
 const supportingOutcomes = [
   {
-    label: "Final state",
-    title: "The list-card approach was rolled out across markets and platforms",
-    body: "The key outcome was not one universal winning card, but a clearer platform-specific direction for how much information the list card should carry. It rolled out across multiple markets and platforms, giving AutoScout24 a cleaner and more scalable foundation for results browsing without pretending one pattern should serve every surface equally.",
+    label: "Transferable signal",
+    title: "Product judgment under constraint",
+    body: "This case shows how I handle scarce attention, competing business goals, mixed evidence, and cross-platform delivery while preserving platform differences.",
   },
 ];
 
@@ -176,7 +213,8 @@ export default function DeclutterListPage() {
         <CaseStudyHero
           eyebrow="Case Study · AutoScout24 · Search & Discovery"
           title="Declutter the List Page"
-          lede="Across a multi-phase programme, I led the design work to simplify AutoScout24's list-page card across web and app. The work improved browsing clarity, gave teams a stronger basis for rollout decisions, and showed where web and native apps needed different treatments. The harder challenge was not removing UI alone, but improving decision quality: deciding which buyer, commercial, and platform needs deserved limited card space."
+          lede="Redesigning a high-traffic marketplace decision surface."
+          secondaryLede="Buyers used AutoScout24's list card to compare vehicles; product teams used the same space for dealer, partner, and media goals. I led the design work across mWeb, desktop, iOS, and Android to reduce scan friction, test commercial tradeoffs, and define platform-specific card rules."
           facts={heroFacts}
         >
           <CaseStudyFigure
@@ -194,26 +232,24 @@ export default function DeclutterListPage() {
         <CaseStudySection
           eyebrow="Overview"
           title="A list card redesign aimed at faster decisions"
-          intro="This was a decision-quality problem in the search funnel, not a visual tidy-up. Research and behavioural analysis pointed to a commercially meaningful issue: buyers were working too hard to scan, compare, and decide which offers deserved a closer look."
+          intro="The list card had to answer one question fast: is this vehicle worth opening? Research and behavioural analysis showed that competing signals slowed comparison, weakened hierarchy, and made buyers work too hard before the detail page."
           className="border-t-0"
         >
           <CaseStudyProse>
             <p>
-              Early research pointed to the same pattern from multiple angles:
-              too many elements competing for attention, unclear hierarchy, and
-              weak visual cues for what deserved a closer look.
+              Early research pointed to too many elements competing for
+              attention, unclear hierarchy, and weak visual cues for what
+              deserved a closer look.
             </p>
             <p>
-              The list page still had to do three jobs well: make it clear that
-              users were browsing a list, signal that opening a card was the
-              route to richer detail, and provide enough context to compare
-              offers quickly.
+              The card still had to do three jobs: make the list feel scannable,
+              signal that detail lived one level deeper, and provide enough
+              context for fast comparison.
             </p>
             <p>
-              In practice, that meant reducing information density, showing
-              more offers above the fold, clarifying what the image area
-              signalled, and later reworking commercial entry points rather
-              than letting every internal demand stay equally prominent.
+              That meant reducing density, showing more offers above the fold,
+              clarifying image behaviour, and reworking commercial entry points
+              so internal demands did not all receive equal space.
             </p>
             <p>
               The work was tested through A/B experiments and follow-up
@@ -227,7 +263,7 @@ export default function DeclutterListPage() {
         <CaseStudySection
           eyebrow="Visual Proof"
           title="The desktop card made the hierarchy shift obvious"
-          intro="Once the problem is clear, the desktop compare makes the core move easy to see: less noise, clearer scanability, and a more disciplined balance between product signals and commercial surfaces."
+          intro="The desktop comparison shows the core move: fewer competing signals, stronger scanability, and a more disciplined balance between vehicle information and commercial surfaces."
         >
           <div className="space-y-8 sm:space-y-10">
             {desktopCompareImages.map((item) => (
@@ -244,22 +280,19 @@ export default function DeclutterListPage() {
         <CaseStudySection
           eyebrow="Strategic Context"
           title="This work sat inside a broader buyer reset"
-          intro="The list-card redesign mattered partly because it was one downstream expression of a wider effort to improve how buyers moved from search results to confident decisions."
+          intro="The list-card redesign sat inside a wider effort to improve how buyers moved from search results to confident decisions."
         >
           <CaseStudyProse>
             <p>
-              This work did not start as an isolated card cleanup. It sat inside
-              a broader buyer-side effort to improve guidance, selection, and
-              trust across search and decision-making surfaces. That context
-              helped clarify why the list page mattered so much: if buyers could
-              not scan, compare, and progress confidently from results,
-              improvements elsewhere in the journey would have limited effect.
+              The team was improving guidance, selection, and trust across
+              search and decision-making surfaces. The list page mattered
+              because buyers needed to scan, compare, and progress from results
+              before improvements elsewhere in the journey could matter.
             </p>
             <p>
-              For this case study, I am not treating that broader work as the
-              main story. I am including it only as context for why simplifying
-              the list card became an important product decision, not just a
-              visual one.
+              This case focuses on the card because it became the surface where
+              buyer needs, commercial entry points, and platform differences had
+              to be reconciled.
             </p>
           </CaseStudyProse>
         </CaseStudySection>
@@ -267,7 +300,7 @@ export default function DeclutterListPage() {
         <CaseStudySection
           eyebrow="Why This Mattered"
           title="This was a marketplace prioritisation problem"
-          intro="A small change on the list card could move much more than aesthetics."
+          intro="A small hierarchy change on the list card could affect how buyers progressed and how commercial surfaces performed."
         >
           <BulletList items={whyItMattered} />
         </CaseStudySection>
@@ -275,7 +308,7 @@ export default function DeclutterListPage() {
         <CaseStudySection
           eyebrow="My Role"
           title="What I directly drove, and what stayed shared"
-          intro="My role was to lead the design problem across multiple phases: clarify what the card should optimise for, validate the riskiest tradeoffs, and help turn repeated findings into a rollout direction."
+          intro="I led the design problem across multiple phases: clarify what the card should optimise for, validate the riskiest tradeoffs, and help turn repeated findings into rollout direction."
         >
           <div className="grid gap-5 2xl:grid-cols-2">
             {roleDetails.map((group) => (
@@ -289,7 +322,7 @@ export default function DeclutterListPage() {
         <CaseStudySection
           eyebrow="Key Decisions"
           title="The most important calls were about evidence and priorities"
-          intro="What made the work consequential was not a cleaner layout on its own. It was deciding what evidence to trust and what the card should prioritise on each platform."
+          intro="The work became consequential when the team had to decide what evidence to trust and what the card should prioritise on each platform."
         >
           <div className="grid gap-5 2xl:grid-cols-2">
             {keyDecisions.map((decision) => (
@@ -303,19 +336,58 @@ export default function DeclutterListPage() {
         </CaseStudySection>
 
         <CaseStudySection
+          eyebrow="Decision Flow"
+          title="How evidence became rollout rules"
+          intro="In each phase, the team narrowed the card around what buyers needed to decide, while testing which business signals could move, lose prominence, or stay on-card."
+        >
+          <div className="grid gap-5 xl:grid-cols-2">
+            {decisionFlow.map((item) => (
+              <CaseStudyCard key={item.decision} title={item.decision}>
+                <dl className="space-y-5">
+                  <div>
+                    <dt className="homepage-type-eyebrow text-[color:var(--color-muted)]">
+                      Evidence
+                    </dt>
+                    <dd className="homepage-type-body mt-2 text-[color:var(--foreground)]">
+                      {item.evidence}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="homepage-type-eyebrow text-[color:var(--color-muted)]">
+                      Tradeoff
+                    </dt>
+                    <dd className="homepage-type-body mt-2 text-[color:var(--foreground)]">
+                      {item.tradeoff}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="homepage-type-eyebrow text-[color:var(--color-muted)]">
+                      Call
+                    </dt>
+                    <dd className="homepage-type-body mt-2 text-[color:var(--foreground)]">
+                      {item.call}
+                    </dd>
+                  </div>
+                </dl>
+              </CaseStudyCard>
+            ))}
+          </div>
+        </CaseStudySection>
+
+        <CaseStudySection
           eyebrow="Platform Divergence"
           title="Apps kept a different balance of imagery and information"
-          intro="The programme did not end with one universal card. The app direction retained a different mix of image emphasis and details, which is why it belongs next to the platform-divergence story rather than at the top of the case study."
+          intro="The final direction kept shared principles without forcing one universal card. Apps retained a different mix of image emphasis and details because the evidence and interaction context differed from web."
         >
           <CaseStudyFigureGrid items={appCompareImages} />
         </CaseStudySection>
 
         <CaseStudySection
           eyebrow="Outcome / Impact"
-          title="What the evidence supports"
-          intro="The clearest honest landing is that stronger declutter produced positive validation signals, follow-up analysis clarified where simpler web behaviour was safer, and the programme ultimately landed as a platform-specific rollout rather than one universal winner."
+          title="Evidence and rollout"
+          intro="The team had enough evidence to move toward a cleaner card, with platform-specific limits. Early mWeb tests favoured stronger simplification; later desktop and iOS validation showed why gallery behaviour needed separate treatment."
         >
-          <div className="grid gap-5 2xl:grid-cols-2">
+          <div className="grid gap-5 xl:grid-cols-3">
             {confirmedOutcomes.map((outcome, index) => (
               <CaseStudyCard
                 key={outcome.summary}
@@ -355,7 +427,7 @@ export default function DeclutterListPage() {
         <CaseStudySection
           eyebrow="Mobile Web"
           title="The same declutter logic had to hold up in tighter space"
-          intro="On mobile web, the challenge was not only reducing clutter but deciding which signals deserved the limited space. The reduced card made the key comparison cues easier to read without treating every element as equally important."
+          intro="On mobile web, the reduced card made comparison cues easier to read within tighter space and forced sharper decisions about which signals deserved prominence."
           className="py-10 sm:py-20 lg:py-24"
           contentClassName="space-y-6 sm:space-y-8"
         >
@@ -365,17 +437,15 @@ export default function DeclutterListPage() {
         <CaseStudySection
           eyebrow="Reflection"
           title="What this project clarified"
-          intro="Simplification only held up when the team was explicit about what the card should optimise for."
+          intro="Simplification held up only when the team named what the card should optimise for and which measures deserved trust."
           className="py-10 sm:py-20 lg:py-24"
           contentClassName="space-y-6 sm:space-y-8"
         >
           <CaseStudyProse>
             <p>
-              The most useful lesson was that high-traffic marketplace surfaces
-              do not get simpler by removing elements alone. They improve when
-              the team is clear about the decision the surface needs to support,
-              uses the right measures to judge progress, and lets platforms
-              diverge when the tradeoffs genuinely differ.
+              High-traffic marketplace surfaces get clearer when teams define
+              the buyer decision, choose the right progress measures, and let
+              platforms diverge when the tradeoffs differ.
             </p>
           </CaseStudyProse>
         </CaseStudySection>

@@ -41,6 +41,14 @@ const heroFacts = [
     value: "Search across iOS, Android, desktop, and mobile web",
   },
   {
+    label: "Timeframe",
+    value: "2024-2026 staged rollout",
+  },
+  {
+    label: "Team",
+    value: "Product, research, engineering, analytics, and app/web design",
+  },
+  {
     label: "Reset",
     value: "Triggered by mixed earlier results",
   },
@@ -53,27 +61,28 @@ const heroFacts = [
 
 const heroHighlights = [
   {
-    label: "Reset trigger",
-    metricLines: ["Earlier", "direction"],
-    body: "Earlier validation showed the app search direction was not strong enough, so the team needed a stronger baseline rather than another cleanup pass.",
+    label: "Weak direction reset",
+    metricLines: ["Reset", "after", "evidence"],
+    body: "Earlier app validation exposed a weak direction. We rebuilt the baseline around clearer filter hierarchy, earlier intent entry, and reviewable selections before buyers returned to results.",
   },
   {
-    label: "First validation",
-    metricLines: ["iOS", "signal"],
-    body: "iOS was the first clear validation of the new search direction. The redesigned baseline produced positive commercial progression signals while maintaining downstream engagement, giving the team confidence to roll it out more broadly.",
+    label: "iOS benchmark and rollout",
+    metricLines: ["iOS", "proof"],
+    body: "iOS gave the team its cleanest proof point: about +6% leads from the list page, with detail-page engagement stable, before broad rollout.",
   },
   {
-    label: "Later proof",
-    metricLines: ["Broader", "evidence"],
-    body: "After iOS, Android and web added supporting evidence for the new direction. Both showed positive signals, though neither matched the strength of the initial iOS validation.",
+    label: "Platform judgment",
+    metricLines: ["Adapted", "by", "surface"],
+    body: "Android and web extended the same product model with narrower proof. We adapted save behaviour and rollout scope by platform, then shipped web as a simpler baseline the team could build on.",
   },
 ];
 
 const roleSignals = [
-  "I led the app filter-design direction and helped shape the cross-platform baseline with product, research, engineering, and analytics partners.",
-  "My strongest direct scope was the app filters experience: information architecture, key UX and UI decisions, and the interaction patterns across iOS and Android for how people set filters and get back to more relevant results.",
-  "I shaped the core design concept, helped frame and de-risk the research, and pushed the baseline decisions that mattered most: filter hierarchy, earlier make-and-model entry, clearer completion behaviour, and where platforms should align or diverge.",
-  "The cross-platform baseline was collaborative. I later carried that direction into web work with another senior designer and cross-functional partners, while testing, rollout, and business outcomes remained shared team results.",
+  "Directly drove: app filter information architecture, the main filter overview, filter-entry hierarchy, make/model placement, and completion behaviour across iOS and Android.",
+  "Influenced: cross-platform baseline decisions with product, research, engineering, analytics, and another senior designer as the direction moved into web.",
+  "Why I pushed it: make/model carried high buyer intent, while the old structure asked people to manage too much filter depth before the product understood their search.",
+  "Framed risk: helped move the team away from a weak earlier direction and toward a baseline we could test, launch, and extend.",
+  "Shared outcomes: research, experimentation, rollout, and commercial results were team-owned, so I treat them as shared evidence rather than personal attribution.",
 ];
 
 const problemSignals = [
@@ -84,32 +93,59 @@ const problemSignals = [
 ];
 
 const experienceChanges = [
-  "The work moved away from patching the old flow and toward a clearer main filter overview that grouped filters more deliberately, surfaced what was already selected, and let people drill into one decision at a time.",
-  "Important narrowing decisions were brought forward. Make and model moved earlier in the flow, making one of the highest-value choices easier to reach and setting up a broader rethink of how buyers express vehicle intent as the underlying data became more nuanced.",
-  "Completion also became easier to interpret. The stronger app interaction made filter changes feel more deliberate and easier to review before people returned to results.",
-  "The baseline was then adapted rather than cloned: Android moved toward platform-appropriate save behaviour with extra clarity work still needed, while web launched a narrower baseline first and deferred richer enhancements until later.",
+  "Before the reset, buyers met too much filter structure before the product understood their intent. Make and model sat too deep, applied filters took work to review, and app and web patterns had drifted.",
+  "The reset brought important narrowing decisions forward, grouped filters around clearer choices, and let buyers drill into one decision at a time.",
+  "The hard part was exposing richer vehicle data while keeping the experience light enough to use. The system needed to support nuanced intent without turning every search into configuration work.",
+  "The baseline was adapted rather than cloned: Android moved toward platform-appropriate save behaviour with extra clarity work still needed, while web launched a narrower baseline first and deferred richer enhancements until later.",
 ];
 
 const taxonomyWorkstream = {
   title: "New Make/Model Taxonomy and Filter Experience",
   paragraphs: [
-    "As part of the broader New Search reset, I helped shape a new make-and-model experience for more nuanced vehicle data. The legacy interaction assumed buyers could move cleanly from make to model, but that stopped scaling once deeper distinctions started to matter.",
-    "This was not just a filter redesign. It was a mental-model and intent-expression problem: how to expose a richer structure without overwhelming people. I explored how search, drilldown, grouped dimensions, and clearer selection management could make the system feel clearer rather than heavier. The work is still evolving, so I treat it as strategically important work in progress rather than a neat resolved win.",
+    "As part of the broader New Search reset, I helped shape a new make-and-model experience for more nuanced vehicle data. The legacy interaction assumed buyers could move cleanly from make to model, but that stopped scaling once generation, variant, and engine choices started to matter.",
+    "This became a mental-model and intent-expression problem: how to expose a richer structure without overwhelming people. I explored search, drilldown, grouped dimensions, and clearer selection management so the system could feel more precise without feeling heavier. The work is still evolving, so I treat it as strategically important work in progress rather than a resolved win.",
   ],
 };
+
+const makeModelDecisionAnnotations = [
+  {
+    label: "Old problem",
+    body: "The old make-to-model path assumed a simple hierarchy and buried a high-intent narrowing decision too late.",
+  },
+  {
+    label: "Design move",
+    body: "I pushed make/model earlier and explored search, drilldown, grouped dimensions, and clearer selected-state management.",
+  },
+  {
+    label: "Tradeoff",
+    body: "The richer taxonomy needed to stay precise without turning search into configuration work.",
+  },
+  {
+    label: "Why it mattered",
+    body: "A clearer intent entry gave buyers a faster path to relevant inventory and gave the team a cleaner model to test.",
+  },
+];
+
+const proofSignals = [
+  "Intent expression: helped buyers express complex vehicle choices without making the filter system feel heavier.",
+  "Search systems: clarified hierarchy, taxonomy, selection management, and return-to-results behaviour.",
+  "Evidence discipline: reset the direction after weak validation and used the strongest proof to sequence rollout.",
+  "Platform judgment: aligned the product model across surfaces while adapting interaction details by platform.",
+  "Commercial awareness: connected buyer clarity to list-page progression and enquiry paths without overstating causality.",
+];
 
 const decisionCards = [
   {
     title: "Reset the baseline instead of polishing a weak direction",
-    body: "Earlier app validation weakened confidence in the existing direction, so polishing it further would have been the wrong bet. We reset the baseline instead: simplify the filter model, reduce structural complexity, and create something the team could validate and extend more reliably.",
+    body: "Earlier app validation weakened confidence in the existing direction. We reset the filter model, reduced structural complexity, and created a baseline the team could validate and extend.",
   },
   {
     title: "Validate the new direction where the proof was strongest",
-    body: "iOS became the first clean proof point. The redesigned baseline moved commercial progression signals in the right direction while maintaining downstream engagement. We kept the nuance: this was a credible win rather than a claim that every KPI improved.",
+    body: "iOS became the first clean proof point. The redesigned baseline moved commercial progression signals in the right direction while maintaining downstream engagement.",
   },
   {
     title: "Adapt the baseline by platform and ship web in stages",
-    body: "We did not force one interaction everywhere. Android evidence supported the same direction more narrowly, with additional clarity work still needed. Web came later as an intentionally narrower baseline, supported by positive commercial progression signals and stable downstream engagement rather than a broad claim that every surface improved equally.",
+    body: "We adapted the same product model to each surface. Android evidence supported the direction more narrowly, while web shipped later as a simpler baseline with richer enhancements deferred.",
   },
 ];
 
@@ -117,17 +153,17 @@ const platformSignals = [
   {
     label: "iOS",
     metric: "Strongest validation",
-    body: "iOS is the clearest proof point. The redesigned baseline showed positive commercial progression signals while maintaining downstream engagement, then rolled out more broadly.",
+    body: "The iOS benchmark selected the new direction and later rollout evidence confirmed broad launch across AutoScout24 markets and white labels.",
   },
   {
     label: "Android",
     metric: "Supporting signal",
-    body: "Android supports the same direction, but more narrowly. Research and validation favoured platform-appropriate save behaviour, while the visible evidence remains positive but less complete than the iOS story.",
+    body: "Android supported the same direction through narrower evidence. Research and validation favoured platform-appropriate save behaviour, but the available proof is less complete than the iOS story.",
   },
   {
     label: "Web",
     metric: "Phased baseline",
-    body: "Web came later as a simpler baseline launch. Post-launch analysis indicated positive movement on key progression signals while mobile web and downstream engagement stayed broadly stable. That supports the launch story, but it remains narrower evidence than the app validation.",
+    body: "Web launched later as a simpler baseline. Post-launch analysis indicated positive movement on key progression signals while mobile web and downstream engagement stayed broadly stable.",
   },
 ];
 
@@ -187,7 +223,7 @@ export default function NewSearchPage() {
         <CaseStudyHero
           eyebrow="Case Study · AutoScout24 · Search & Discovery"
           title="New Search"
-          lede="New Search was a strategic reset of one of AutoScout24's most important journeys. This was not only a filter redesign. It was a reset of how buyers express intent in a marketplace with complex inventory, so they could find relevant cars with less ambiguity while the business gained a stronger foundation for commercial progression and future search improvements."
+          lede="New Search reset how buyers narrow complex car inventory across app and web. I led the app filter direction and helped shape a cross-platform baseline after earlier validation exposed a weak search model. The work brought clearer intent entry, platform-specific interaction choices, and stronger evidence discipline to one of AutoScout24's highest-value buyer journeys."
           facts={heroFacts}
         >
           <div className="mt-12 grid gap-5 md:grid-cols-2 2xl:grid-cols-3">
@@ -248,11 +284,11 @@ export default function NewSearchPage() {
               was strong enough.
             </p>
             <p>
-              Because exact performance figures are not included publicly, I
-              focus on the shape of the evidence: research, experimentation,
-              and post-launch analysis showed positive movement in key
-              commercial progression signals on the strongest surfaces while
-              downstream engagement stayed broadly stable.
+              Because the full performance picture is confidential, I focus on
+              evidence I can share: research, experimentation, and post-launch
+              analysis showed positive movement in key commercial progression
+              signals on the strongest surfaces while downstream engagement
+              stayed broadly stable.
             </p>
           </CaseStudyProse>
 
@@ -275,6 +311,14 @@ export default function NewSearchPage() {
               ))}
             </div>
           </div>
+        </CaseStudySection>
+
+        <CaseStudySection
+          eyebrow="Product Judgment"
+          title="What this work proves"
+          intro="My job was to help turn complex user intent, product constraints, and platform differences into a baseline teams could test and extend."
+        >
+          <BulletList items={proofSignals} />
         </CaseStudySection>
 
         <CaseStudySection
@@ -336,13 +380,29 @@ export default function NewSearchPage() {
               </div>
 
               <CaseStudyFigure
-                label="Concrete decision"
+                label="Annotated decision"
                 image={mwebSearchAfterMakeModel}
                 alt="Mobile web make and model selection flow showing how the reset brought a high-value filtering decision earlier in the experience."
                 caption="On mobile web, make and model moved earlier into a clearer selection flow."
                 imageClassName="h-auto max-h-[30rem] !w-auto max-w-full"
                 mediaClassName="flex items-start justify-center"
               />
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {makeModelDecisionAnnotations.map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-lg border border-[color:var(--color-line)] p-5 sm:p-6"
+                >
+                  <p className="homepage-type-eyebrow text-[color:var(--color-muted)]">
+                    {item.label}
+                  </p>
+                  <p className="homepage-type-body mt-3 text-[color:var(--color-muted)]">
+                    {item.body}
+                  </p>
+                </div>
+              ))}
             </div>
 
             <CaseStudyFigure
@@ -356,8 +416,8 @@ export default function NewSearchPage() {
 
         <CaseStudySection
           eyebrow="My Role"
-          title="What I directly drove"
-          intro="My contribution was strongest in shaping the direction of the baseline and the decisions around it, not in claiming sole ownership of every validation or launch result."
+          title="What I owned, influenced, and shared"
+          intro="My role was strongest in the app filter direction and the product decisions around the baseline. I separate direct ownership from shared team outcomes because the evidence and rollout were collaborative."
         >
           <BulletList items={roleSignals} />
         </CaseStudySection>
@@ -376,10 +436,10 @@ export default function NewSearchPage() {
                 Legacy baseline, intermediate direction, stronger reset
               </h3>
               <p className="homepage-type-body max-w-3xl text-[color:var(--color-muted)]">
-                The reset was not a cosmetic tune-up. The team moved beyond the
-                older baseline, stepped away from a weaker intermediate
-                direction, and established a clearer baseline it could validate
-                and extend.
+                Buyers met too much filter structure before the product
+                understood their intent. The reset brought high-value narrowing
+                decisions forward, made selected filters easier to review, and
+                gave the team a cleaner model to validate.
               </p>
 
               <CaseStudyFigureGrid items={decisionComparisonImages} />
@@ -412,7 +472,7 @@ export default function NewSearchPage() {
         <CaseStudySection
           eyebrow="Outcomes / Impact"
           title="A stronger baseline, validated first on iOS"
-          intro="The outcome here is not that every platform improved in the same way. It is that New Search established a stronger baseline, proved it most clearly on iOS, and then extended across Android and web with more limited evidence."
+          intro="New Search gave the team a clearer search baseline and proved the direction most cleanly on iOS. Android and web extended the model with narrower evidence, so the result reads as a staged product-system outcome rather than one uniform launch story."
         >
           <CaseStudyCard variant="soft" className="!h-auto">
             <div className="space-y-8">
@@ -442,10 +502,12 @@ export default function NewSearchPage() {
           <CaseStudyProse>
             <p>
               Broader strategy work around New Search modelled larger upside and
-              tied the programme to stronger enquiry paths, but I treat that as
-              business-case context rather than delivered outcome. The honest
-              takeaway is a staged reset with one strong proof point and two
-              narrower follow-through stories.
+              tied the programme to stronger enquiry paths. I treat that as
+              business-case context rather than delivered outcome. The delivered
+              story is tighter: the team replaced a fragmented search model with
+              a clearer baseline, validated the strongest surface first, and
+              carried the direction across platforms with evidence calibrated to
+              each surface.
             </p>
           </CaseStudyProse>
         </CaseStudySection>

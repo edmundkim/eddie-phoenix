@@ -16,9 +16,9 @@ import CaseStudyEndNav from "@/components/CaseStudyEndNav";
 import strategicAiMockupHero from "../../../content/case-studies/strategic-AI/assets/strategic-ai-mockup-hero.png";
 
 export const metadata: Metadata = {
-  title: "Shaping How AI Should Work in Product | Eddie Kim",
+  title: "Defining AI Visibility, Review, and Control | Eddie Kim",
   description:
-    "Work on AI product direction, reusable communication standards, AI-assisted workflow capability, and cross-team AI design leadership at AutoScout24.",
+    "Work on AI product direction, reusable communication standards, review and control patterns, AI prototyping capability, and cross-team AI design leadership at AutoScout24.",
 };
 
 const heroFacts = [
@@ -26,12 +26,12 @@ const heroFacts = [
   {
     label: "Owned Directly",
     value:
-      "Visual AI Framework, AI decision guidance, and education paths for AI-assisted workflows",
+      "Visual AI Framework, AI review model, and education paths for AI-assisted workflows",
   },
   {
     label: "Focus",
     value:
-      "Reusable decision logic for AI visibility, explanation, review, and control",
+      "Rules for when AI should be quiet, labelled, explainable, reviewable, or confirmed",
   },
   {
     label: "Aligned",
@@ -43,7 +43,7 @@ const heroFacts = [
 const whyItMattered = [
   "Without shared standards, AI cues, labels, and interaction patterns could drift across products.",
   "Teams needed clearer rules for when AI should be obvious to users and what level of review or control it required.",
-  "The UX team needed practical education paths for AI-assisted workflows as AI changed product-development and design practice.",
+  "UX and product teams needed practical ways to prototype, discuss, and review AI as the technology changed product-development work.",
 ];
 
 const roleScope = [
@@ -70,15 +70,110 @@ const roleScope = [
 const frameworkPrinciples = [
   {
     title: "Visibility scaled with user impact",
-    body: "The core rule was simple: AI should become more visible as its effect on user understanding, decisions, and control increases.",
+    body: "I set the rule that teams should increase AI visibility as its effect on user understanding, decisions, and control increased.",
   },
   {
     title: "Different AI behaviours needed different signals",
-    body: "The framework distinguished between low-visibility assistance and cases where AI generated, summarised, recommended, personalised in a non-obvious way, or acted on the user's behalf.",
+    body: "I distinguished between low-visibility assistance and cases where AI generated, summarised, recommended, personalised in a non-obvious way, or acted on the user's behalf.",
   },
   {
     title: "Controls increased with stakes",
-    body: "As AI moved closer to decision-shaping or action-taking, the design needed stronger review, consent, editability, override, and exit.",
+    body: "As AI moved closer to decision-shaping or action-taking, teams needed stronger review, consent, editability, override, and exit paths.",
+  },
+];
+
+const decisionProof = [
+  {
+    title: "Low-impact assistance could stay quiet",
+    body: "Formatting, cleanup, and small suggestions could rely on normal edit or undo controls when the risk stayed low.",
+  },
+  {
+    title: "Generated output needed review paths",
+    body: "I treated drafts, summaries, and suggested wording as outputs that needed visible AI signals, editability, regeneration, and dismissal.",
+  },
+  {
+    title: "Recommendations needed reasons",
+    body: "I paired ranked suggestions and next-best actions with a short reason, plus a way for users to compare, override, or ignore them.",
+  },
+  {
+    title: "Decision-shaping summaries needed sources",
+    body: "For AI synthesis that could affect user judgement, I pushed for source access, correction paths, and stronger review.",
+  },
+  {
+    title: "AI actions needed confirmation",
+    body: "For AI actions that changed state, sent, published, or committed something, I raised the bar to explicit consent, undo, and auditability.",
+  },
+];
+
+const abstractedProductExample = [
+  {
+    title: "Product question",
+    body: "One concept used AI to condense information that could affect a user's judgement. I focused on whether users would understand that AI had shaped the summary.",
+  },
+  {
+    title: "Design risk",
+    body: "A neutral-looking summary could make users over-trust the output or miss the source material behind the recommendation.",
+  },
+  {
+    title: "Direction shaped",
+    body: "I pushed the concept toward visible AI signalling, source access, correction paths, and a review step before the user acted on the output.",
+  },
+  {
+    title: "Tradeoff",
+    body: "Routine assistance stayed lightweight. AI that shaped interpretation needed stronger disclosure and control because the consequence for user judgement was higher.",
+  },
+];
+
+const useSignals = [
+  {
+    title: "Early AI concept reviews",
+    body: "I used the model while contributing senior design direction to early AI-assisted concepts, with a focus on visibility, review, control, and failure recovery before teams hardened patterns.",
+  },
+  {
+    title: "UX education and enablement",
+    body: "I turned the guidance into education paths and examples for designers working with AI in research, synthesis, content work, workshop planning, and prototype exploration.",
+  },
+  {
+    title: "Senior stakeholder alignment",
+    body: "I used the same decision language with senior product, design, and technology leaders when discussing how AI-assisted workflows changed design practice and product development.",
+  },
+];
+
+const artifactProof = [
+  {
+    title: "AI presence scale",
+    body: "I mapped AI behaviours from quiet assistance to action-taking so teams could judge how much signalling and control a concept needed.",
+  },
+  {
+    title: "Visual signal guidance",
+    body: "I shaped guidance for labels, badges, gradients, and iconography so AI communication stayed clear without turning every interaction into AI theatre.",
+  },
+  {
+    title: "Prototype review prompts",
+    body: "I translated the guidance into review questions teams could apply to concept flows before investing in detailed UI or implementation.",
+  },
+];
+
+const technicalReviewCriteria = [
+  {
+    label: "Input",
+    value: "Identify the data, source material, and user intent the system uses.",
+  },
+  {
+    label: "Output",
+    value: "Check what the user sees and whether AI output could read like neutral product copy.",
+  },
+  {
+    label: "Uncertainty",
+    value: "Decide where the design needs source access, confidence cues, alternatives, or correction.",
+  },
+  {
+    label: "Control",
+    value: "Confirm that users can edit, reject, undo, override, or stop the AI at the right moment.",
+  },
+  {
+    label: "Failure",
+    value: "Define the path when AI is wrong, incomplete, overconfident, or acting on weak context.",
   },
 ];
 
@@ -118,11 +213,22 @@ const aiDecisionModel = [
 const leverageAreas = [
   {
     title: "Early product direction",
-    body: "Alongside the framework work, I contributed senior design direction to early AI-assisted product concepts. Because the work was still upstream, my contribution focused on flows, principles, and decision criteria before patterns hardened.",
+    body: "I contributed senior design direction to early AI-assisted product concepts while the work was still upstream. My contribution focused on flows, principles, and decision criteria before patterns hardened.",
   },
   {
     title: "Internal capability building",
-    body: "I also led AI guidance for UX, education paths for AI-assisted workflows, and prototyping capability across the broader product organisation. As part of that, I led cross-functional capability work with senior product, design, and technology leaders on how AI-assisted workflows were changing design practice and product development.",
+    body: "I led AI guidance for UX, education paths for AI-assisted workflows, and prototyping capability across the broader product organisation. I also led cross-functional capability work with senior product, design, and technology leaders on changes to design practice and product development.",
+  },
+];
+
+const capabilityAreas = [
+  {
+    title: "Practical UX education",
+    body: "I translated AI research and tool exploration into examples designers could use for discovery, synthesis, content work, workshop planning, and prototype exploration.",
+  },
+  {
+    title: "Prototype-ready review criteria",
+    body: "I helped early AI ideas move toward testable flows with review points for capability, limits, user control, and failure recovery.",
   },
 ];
 
@@ -134,9 +240,9 @@ export default function StrategicAiDesignLeadershipPage() {
       <CaseStudyArticle>
         <CaseStudyHero
           eyebrow="AutoScout24 · Strategic AI Design Leadership"
-          title="Shaping How AI Should Work in Product"
-          lede="At AutoScout24, I led the design standards for how AI should appear, explain itself, and preserve user control across product experiences."
-          secondaryLede="Because the underlying AI initiatives are confidential and tied to current strategy, this case study focuses on the reusable decision model: how I helped teams decide when AI should be quiet, labelled, explainable, reviewable, or explicitly controlled by the user."
+          title="Defining AI Visibility, Review, and Control"
+          lede="At AutoScout24, I led a Visual AI Framework with clear rules for when AI should stay quiet, explain itself, invite review, or require user confirmation."
+          secondaryLede="Because the underlying product concepts remain confidential and early, I focus here on public-safe proof: the decision model I owned, the product direction I shaped, and the AI capability work I led across UX and the broader Builders organisation."
           facts={heroFacts}
         >
           <CaseStudyFigure
@@ -153,7 +259,7 @@ export default function StrategicAiDesignLeadershipPage() {
         <CaseStudySection
           eyebrow="Why This Work Existed"
           title="AI work was accelerating before shared standards existed"
-          intro="The challenge was less about one feature and more about preventing inconsistent AI patterns from spreading across the product before there was a reusable model for designing them."
+          intro="Teams were moving faster with AI than the product system could absorb. I turned the work into a shared way for designers and product partners to decide how visible, explainable, and controllable AI needed to be."
           className="border-t-0"
         >
           <BulletList items={whyItMattered} />
@@ -161,7 +267,7 @@ export default function StrategicAiDesignLeadershipPage() {
 
         <CaseStudySection
           eyebrow="Role"
-          title="What I owned and where I shaped direction"
+          title="Ownership and influence"
           intro="I owned the reusable standards work and the AI design guidance behind it. I also led cross-functional capability work around AI-assisted workflows, aligning the work with senior product, design, and technology leaders. On product concepts, my role was senior design direction: helping shape key flows, principles, and tradeoffs alongside other designers and cross-functional partners."
         >
           <div className="grid gap-5 2xl:grid-cols-2">
@@ -176,7 +282,7 @@ export default function StrategicAiDesignLeadershipPage() {
         <CaseStudySection
           eyebrow="Visual AI Framework"
           title="The most concrete output was a reusable AI communication model"
-          intro="The framework turned broad AI principles into a reusable standard teams could use to make more consistent product decisions."
+          intro="I translated broad AI principles into product rules teams could apply during concept, prototype, and review work."
         >
           <div className="grid gap-5 2xl:grid-cols-2">
             {frameworkPrinciples.map((principle) => (
@@ -190,21 +296,19 @@ export default function StrategicAiDesignLeadershipPage() {
 
           <CaseStudyProse>
             <p>
-              The model below is abstracted from internal framework work and
-              rebuilt with generalized examples to protect confidential product
-              strategy.
+              I rebuilt the model below from internal framework work with
+              generalized examples to protect confidential product strategy.
             </p>
             <p>
-              In practice, subtle assistive behaviour could stay quiet, while
-              generated summaries, recommendations, and non-obvious
-              personalisation needed clearer labelling and a stronger review
-              path.
+              Subtle assistive behaviour could stay quiet. Generated summaries,
+              recommendations, and non-obvious personalisation needed clearer
+              labelling and a stronger review path.
             </p>
             <p>
-              The framework combined a shared AI visibility model with reusable
+              I combined a shared AI visibility model with reusable
               signals such as labels, badges, gradients, and icons, plus
-              guidance on review and override. It gave teams a clearer basis
-              for deciding what needed explicit signalling, what could remain
+              guidance on review and override. I used it to clarify what
+              needed explicit signalling, what could remain
               lightweight, and when stronger review or control was necessary.
             </p>
           </CaseStudyProse>
@@ -248,9 +352,94 @@ export default function StrategicAiDesignLeadershipPage() {
         </CaseStudySection>
 
         <CaseStudySection
+          eyebrow="Decision Guidance"
+          title="Decisions I clarified with the framework"
+          intro="I used the framework to make AI concept reviews more specific before patterns hardened. I connected AI behaviour to user-facing signals, controls, and review paths."
+        >
+          <div className="grid gap-5 2xl:grid-cols-2">
+            {decisionProof.map((decision) => (
+              <CaseStudyCard key={decision.title} title={decision.title}>
+                <p className="homepage-type-body text-[color:var(--color-muted)]">
+                  {decision.body}
+                </p>
+              </CaseStudyCard>
+            ))}
+          </div>
+        </CaseStudySection>
+
+        <CaseStudySection
+          eyebrow="Abstracted Example"
+          title="How I shifted a decision-shaping AI concept"
+          intro="The exact product context is confidential. I can describe the design problem safely: AI was summarising information that could influence user judgement, so the interface needed more than a lightweight AI label."
+        >
+          <div className="grid gap-5 2xl:grid-cols-2">
+            {abstractedProductExample.map((item) => (
+              <CaseStudyCard key={item.title} title={item.title}>
+                <p className="homepage-type-body text-[color:var(--color-muted)]">
+                  {item.body}
+                </p>
+              </CaseStudyCard>
+            ))}
+          </div>
+        </CaseStudySection>
+
+        <CaseStudySection
+          eyebrow="Use In Practice"
+          title="Using the guidance in practice"
+          intro="I ground the case in upstream proof: early concept direction, UX enablement, prototyping support, and senior alignment."
+        >
+          <div className="grid gap-5 2xl:grid-cols-3">
+            {useSignals.map((signal) => (
+              <CaseStudyCard key={signal.title} title={signal.title}>
+                <p className="homepage-type-body text-[color:var(--color-muted)]">
+                  {signal.body}
+                </p>
+              </CaseStudyCard>
+            ))}
+          </div>
+        </CaseStudySection>
+
+        <CaseStudySection
+          eyebrow="Working Artifacts"
+          title="Making the framework usable in product reviews"
+          intro="I translated principles into artifact guidance and review prompts that teams could use during concept reviews and prototype discussions."
+        >
+          <div className="grid gap-5 2xl:grid-cols-3">
+            {artifactProof.map((artifact) => (
+              <CaseStudyCard key={artifact.title} title={artifact.title}>
+                <p className="homepage-type-body text-[color:var(--color-muted)]">
+                  {artifact.body}
+                </p>
+              </CaseStudyCard>
+            ))}
+          </div>
+
+          <div className="mt-5 overflow-hidden rounded-lg border border-[color:var(--color-line)]">
+            {technicalReviewCriteria.map((item, index) => (
+              <div
+                key={item.label}
+                className="grid gap-5 border-b border-[color:var(--color-line)] px-6 py-6 last:border-b-0 sm:px-8 2xl:grid-cols-[5rem_minmax(0,0.4fr)_minmax(0,1fr)] 2xl:gap-8"
+              >
+                <p className="homepage-type-eyebrow text-[color:var(--color-muted)]">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+
+                <h3 className="homepage-type-item-title text-[color:var(--foreground)]">
+                  {item.label}
+                </h3>
+
+                <p className="homepage-type-body text-[color:var(--color-muted)]">
+                  {item.value}
+                </p>
+              </div>
+            ))}
+          </div>
+        </CaseStudySection>
+
+        <CaseStudySection
           eyebrow="Leverage"
           title="The value was in reusable standards and organisational capability"
-          intro="This work was less about a single shipped feature and more about giving teams a clearer basis for early AI product decisions and AI-assisted ways of working."
+          intro="I used this work to create a clearer basis for early AI product decisions and more practical ways to work with AI in design and product development."
         >
           <div className="grid gap-5 2xl:grid-cols-2">
             {leverageAreas.map((group) => (
@@ -262,14 +451,24 @@ export default function StrategicAiDesignLeadershipPage() {
             ))}
           </div>
 
+          <div className="mt-5 grid gap-5 2xl:grid-cols-2">
+            {capabilityAreas.map((group) => (
+              <CaseStudyCard key={group.title} title={group.title}>
+                <p className="homepage-type-body text-[color:var(--color-muted)]">
+                  {group.body}
+                </p>
+              </CaseStudyCard>
+            ))}
+          </div>
+
           <CaseStudyCard variant="soft" className="!h-auto">
             <p className="homepage-type-body text-[color:var(--color-muted)]">
-              The strongest proof here is in the reusable standards,
-              decision-making guidance, and
-              capability-building context rather than post-launch metrics. The
-              product concepts were still early, so this page is
-              intentionally about how the work set direction rather than
-              claiming downstream product outcomes.
+              I limit the proof to public-safe material: the framework, review
+              model, and capability work. Confidential concepts and post-launch
+              metrics stay out of this case. I show senior-level scope through
+              the work I could own directly: setting standards, shaping early
+              AI direction, aligning leaders, and giving teams practical ways
+              to design AI with visibility, review, and control.
             </p>
           </CaseStudyCard>
         </CaseStudySection>

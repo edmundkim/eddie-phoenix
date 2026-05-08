@@ -27,7 +27,7 @@ import vehiclePairingFlow from "../../../content/legacy-projects/smart-connected
 export const metadata: Metadata = {
   title: "smart Connected Car App Design | Eddie Kim",
   description:
-    "Supporting case study on shaping smart's native EV companion app from early research into structured, tested, implementation-ready UX.",
+    "Supporting case study on shaping trust-critical states for smart's native EV companion app before key vehicle and backend behaviours had settled.",
 };
 
 const heroFacts = [
@@ -41,7 +41,7 @@ const heroFacts = [
   },
   {
     label: "Scope",
-    value: "Research synthesis, IA, flows, prototypes, testing, and delivery support",
+    value: "Research synthesis, IA, state flows, prototypes, testing, and delivery support",
   },
   {
     label: "Stage",
@@ -50,10 +50,10 @@ const heroFacts = [
 ];
 
 const constraints = [
-  "The vehicle was still being defined, so the app had to give shape to access, status, remote-control, and ownership moments before every hardware behaviour was fixed.",
-  "smart was phasing out the physical key, making pairing, access, phone-key behaviour, and remote commands trust-critical parts of the experience.",
-  "EV drivers needed confidence around charging, climate, readiness, and vehicle status, not a feature drawer that hid the most important signals.",
-  "Requirements shifted during implementation, with partner and backend integrations across public charging, wall box charging, maps, and internal infrastructure.",
+  "smart was defining the car and companion app in parallel, so UX had to describe access, status, remote-control, and ownership moments before hardware behaviour had settled.",
+  "smart was moving away from the physical key, so pairing, access, phone-key behaviour, and remote commands had to earn trust.",
+  "Drivers needed immediate feedback on charging, climate, range, readiness, and vehicle status.",
+  "Partner integrations across public charging, wall box charging, maps, and backend systems kept requirements moving during implementation.",
 ];
 
 const roleScope = [
@@ -67,7 +67,7 @@ const roleScope = [
     ],
   },
   {
-    title: "How the work created leverage",
+    title: "How the work helped the team decide",
     items: [
       "smart product owners used the artefacts to connect business priorities with user needs and delivery constraints",
       "Engineering, QA, scrum, and Deloitte delivery teams used flows to discuss states, dependencies, and edge cases before build",
@@ -92,34 +92,107 @@ const researchDirection = [
 const productDecisionCards = [
   {
     title: "Make vehicle status the home-screen anchor",
-    body: "EV drivers needed fast confidence in battery, range, charging, and readiness. The home and IA work treated status as a primary surface rather than a detail users had to hunt for, supported by the journey map, IA flow, and home-screen concept iterations.",
+    body: "EV owners treated battery, range, charging, and readiness as confidence signals. I pushed those signals toward the front of the experience instead of hiding them in controls. The tradeoff was keeping the home screen scannable without turning it into a dashboard of every vehicle state.",
   },
   {
     title: "Treat charging as a confidence journey, not a utility",
-    body: "Research emphasised control over when, where, and how charging happened, plus pain around limited visibility. Charging stayed in primary navigation and was explored alongside status, cost, range, public charging, and vehicle readiness.",
+    body: "Survey input and the competitor review showed that charging shaped planning, not only setup. Charging stayed visible as a core journey across status, cost, range, public charging, and readiness. The IA had to support routine checks without burying deeper charging details.",
   },
   {
     title: "Separate frequent remote actions from deeper controls",
-    body: "The planned scope could easily become a dense control drawer. Concept-to-wireframe iterations simplified the default interface and moved lower-frequency controls into more appropriate sections, supported by the home and controls screen evolution.",
+    body: "Locking, climate, and remote commands could affect a vehicle the driver could not see. I separated frequent actions from lower-frequency controls and treated feedback states as part of the interaction. The tradeoff was giving drivers enough control without making the default screen feel like a control drawer.",
   },
   {
     title: "Turn pairing, geofence, and edge-state logic into buildable flows",
-    body: "Vehicle activation, phone-key pairing, geofencing, and remote commands relied on clear sequences, states, and error paths. Detailed flow artefacts gave product owners, developers, and QA a shared model for discussion and implementation.",
+    body: "Pairing, QR activation, saved places, geofence edits, notification preferences, and error paths crossed app, account, vehicle, and backend logic. Detailed flows gave product owners, engineers, and QA a shared way to discuss edge cases before build.",
+  },
+];
+
+const iterationEvidence = [
+  {
+    title: "Home moved from feature access to status confidence",
+    before: "The early home direction had to represent a wide connected-car feature set.",
+    after:
+      "The later direction put vehicle status, readiness, and everyday controls closer to the default surface.",
+  },
+  {
+    title: "Controls moved from dense drawer to clearer hierarchy",
+    before:
+      "The controls concept initially carried more actions than the default view could explain well.",
+    after:
+      "Research, testing, and team review moved lower-frequency actions into more appropriate sections.",
+  },
+  {
+    title: "Navigation elevated the driver jobs that shaped confidence",
+    before:
+      "The app could have followed internal workstreams, partner systems, or feature categories.",
+    after:
+      "Vehicle control, climate, and charging moved into the primary structure because drivers looked for them in live vehicle moments.",
   },
 ];
 
 const deliveryCards = [
   {
     title: "Flows made risk visible",
-    body: "Pairing, geofencing, charging, climate, and remote controls depended on state changes across the app, vehicle, account, and backend systems. Flow artefacts made those dependencies easier to review before build.",
+    body: "Pairing, geofencing, charging, climate, and remote controls depended on state changes across the app, vehicle, account, and backend systems. Flow artefacts helped the team review those dependencies before build.",
   },
   {
     title: "Concepts tested hierarchy",
-    body: "Early home, charging, and climate directions were pulled into wireframes and click dummies, then refined with product-owner feedback, technical feasibility checks, and user testing.",
+    body: "Early home, charging, and climate directions moved into wireframes and click dummies. Product-owner feedback, feasibility checks, and user testing helped narrow the hierarchy.",
   },
   {
     title: "Testing sharpened comprehension",
-    body: "Testing helped the team challenge assumptions, simplify dense areas, clarify controls, and move features into places where users were more likely to understand them in the context of the vehicle.",
+    body: "Testing checked whether drivers understood the structure, control hierarchy, and vehicle-status language. Findings informed navigation, screen hierarchy, and control clarity before implementation continued.",
+  },
+];
+
+const trustCriticalStates = [
+  {
+    moment: "Pairing and activation",
+    risk: "A driver cannot trust the phone-key experience if account, car, QR, or in-car confirmation states do not line up.",
+    response:
+      "Map pairing as a sequence across account state, QR scanning, in-car confirmation, failed pairing, and successful vehicle connection.",
+    artifact: "Vehicle pairing flow",
+  },
+  {
+    moment: "Remote command feedback",
+    risk: "A driver can doubt whether the car responded when lock, climate, or remote-control actions take time.",
+    response:
+      "Treat vehicle actions as state changes that need confirmation, delay handling, and recovery paths.",
+    artifact: "Remote-control and state flows",
+  },
+  {
+    moment: "Charging and readiness",
+    risk: "A driver loses confidence when battery, range, charging, and climate readiness sit too far from planning moments.",
+    response:
+      "Keep battery, range, charging status, and climate readiness close to the driver's main decision points.",
+    artifact: "IA flow and core screen concepts",
+  },
+  {
+    moment: "Geofence and permissions",
+    risk: "A driver may not understand why location access, saved places, and notifications matter to the feature.",
+    response:
+      "Connect saved places, edit states, notification preferences, permission logic, and success feedback in one flow.",
+    artifact: "Geofence workspace",
+  },
+];
+
+const testingFindings = [
+  {
+    title: "Vehicle switching validated the garage model",
+    body: "The matrix records successful task completion for changing to a second vehicle. That supported keeping the garage model intact.",
+  },
+  {
+    title: "Seat-heating levels needed clearer labels",
+    body: "Two participants did not understand the seat-heating level at first. The follow-up recommendation: add the seat-heat level to the label.",
+  },
+  {
+    title: "Loading feedback affected control confidence",
+    body: "Participants struggled more when the loading state appeared during the seat-heating task. That made feedback part of the control design.",
+  },
+  {
+    title: "Controls and climate needed a clean boundary",
+    body: "The formal test covered Controls and Climate prototypes. The follow-up work kept frequent controls visible while moving deeper actions into more appropriate sections.",
   },
 ];
 
@@ -134,8 +207,8 @@ export default function SmartConnectedCarAppPage() {
         <CaseStudyHero
           eyebrow="smart · Connected Car Mobile App"
           title="smart Connected Car App Design"
-          lede="As Experience Design Lead at Deloitte Digital, I helped shape smart's native iOS and Android EV companion app for vehicle access, status, charging, climate, and controls while vehicle, backend, and partner dependencies were still moving."
-          secondaryLede="This is an earlier, pre-launch supporting case. Its value is the product design path: turning an ambiguous connected-EV ecosystem into structured, tested, implementation-ready UX that product, engineering, QA, and delivery teams could align around."
+          lede="As Experience Design Lead at Deloitte Digital, I helped shape smart's native EV companion app before key vehicle behaviours, backend logic, and partner integrations had settled."
+          secondaryLede="The core design challenge was trust: drivers needed to know what the app knew, what the car had done, and what to do when pairing, charging, climate, or remote-control states changed."
           facts={heroFacts}
         />
 
@@ -152,7 +225,7 @@ export default function SmartConnectedCarAppPage() {
         <CaseStudySection
           eyebrow="The Problem"
           title="Design the companion app before the car existed"
-          intro="The brief was not only to design screens. The team needed a coherent product model for pairing, access, remote commands, charging, climate, status, service, and account management around a future electric vehicle and its surrounding systems."
+          intro="The team had to define how a driver would pair a phone, trust vehicle access, read charging status, control climate, manage geofences, and recover when app, car, account, or backend states did not line up."
           className="border-t-0"
         >
           <BulletList items={constraints} />
@@ -170,6 +243,16 @@ export default function SmartConnectedCarAppPage() {
               </CaseStudyCard>
             ))}
           </div>
+
+          <CaseStudyProse>
+            <p>
+              The programme ran for a year with a fifteen-person scrum team and
+              a new smart product-owner group. Because requirements kept moving,
+              the UX artefacts had to do more than document screens: they gave
+              product, engineering, QA, and delivery partners a shared way to
+              review decisions before build.
+            </p>
+          </CaseStudyProse>
         </CaseStudySection>
 
         <CaseStudySection
@@ -210,7 +293,7 @@ export default function SmartConnectedCarAppPage() {
         <CaseStudySection
           eyebrow="Product Decisions"
           title="Key Product Decisions"
-          intro="The central design move was to make the app navigable around the driver's recurring jobs while giving product, engineering, QA, and delivery partners enough structure to discuss states, dependencies, and implementation risk."
+          intro="The central design move was to organise the app around the driver's recurring jobs while making state logic explicit enough for product, engineering, QA, and delivery partners to review."
         >
           <div className="overflow-hidden border-y border-[color:var(--color-line)]">
             {productDecisionCards.map((card, index) => (
@@ -242,6 +325,75 @@ export default function SmartConnectedCarAppPage() {
             preserveWidthOnSmallScreens
             preservedWidthClassName={mobileSafePreservedWidthClassName}
           />
+
+          <div className="border-t border-[color:var(--color-line)] pt-8">
+            <h3 className="homepage-type-item-title max-w-2xl text-[color:var(--foreground)]">
+              What changed in the designs
+            </h3>
+            <div className="mt-5 grid gap-5 lg:grid-cols-3">
+              {iterationEvidence.map((item) => (
+                <CaseStudyCard key={item.title} title={item.title}>
+                  <div className="space-y-4">
+                    <div>
+                      <p className="homepage-type-eyebrow text-[color:var(--color-muted)]">
+                        Earlier pressure
+                      </p>
+                      <p className="homepage-type-body mt-2 text-[color:var(--color-muted)]">
+                        {item.before}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="homepage-type-eyebrow text-[color:var(--color-muted)]">
+                        Later direction
+                      </p>
+                      <p className="homepage-type-body mt-2 text-[color:var(--color-muted)]">
+                        {item.after}
+                      </p>
+                    </div>
+                  </div>
+                </CaseStudyCard>
+              ))}
+            </div>
+          </div>
+        </CaseStudySection>
+
+        <CaseStudySection
+          eyebrow="Technical UX"
+          title="Trust-critical states shaped the UX"
+          intro="Risk sat in the moments where a driver could lose trust: a phone would not pair, a command took time, a geofence needed permission, or charging status depended on systems outside the app."
+        >
+          <div className="grid gap-5 md:grid-cols-2">
+            {trustCriticalStates.map((state) => (
+              <CaseStudyCard key={state.moment} title={state.moment}>
+                <dl className="space-y-4">
+                  <div>
+                    <dt className="homepage-type-eyebrow text-[color:var(--color-muted)]">
+                      Risk
+                    </dt>
+                    <dd className="homepage-type-body mt-2 text-[color:var(--color-muted)]">
+                      {state.risk}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="homepage-type-eyebrow text-[color:var(--color-muted)]">
+                      Design response
+                    </dt>
+                    <dd className="homepage-type-body mt-2 text-[color:var(--color-muted)]">
+                      {state.response}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="homepage-type-eyebrow text-[color:var(--color-muted)]">
+                      Artifact
+                    </dt>
+                    <dd className="homepage-type-body mt-2 text-[color:var(--foreground)]">
+                      {state.artifact}
+                    </dd>
+                  </div>
+                </dl>
+              </CaseStudyCard>
+            ))}
+          </div>
         </CaseStudySection>
 
         <CaseStudySection
@@ -264,7 +416,7 @@ export default function SmartConnectedCarAppPage() {
               label="Pairing flow"
               image={vehiclePairingFlow}
               alt="Vehicle activation flow showing in-car steps, login, QR code scanning, pairing, error handling, and successful vehicle connection states."
-              caption="The pairing flow turned access into an implementation conversation: account, vehicle, QR and in-car steps, error handling, and success states had to line up for users to trust the connection."
+              caption="The pairing flow made access concrete for implementation: account, vehicle, QR and in-car steps, error handling, and success states had to line up for users to trust the connection."
               preserveWidthOnSmallScreens
               preservedWidthClassName={mobileSafePreservedWidthClassName}
             />
@@ -299,22 +451,45 @@ export default function SmartConnectedCarAppPage() {
         </CaseStudySection>
 
         <CaseStudySection
+          eyebrow="Testing"
+          title="Usability testing narrowed the fixes"
+          intro="In one formal round, eight participants tested core Controls and Climate functionality. Participants completed the main tasks, while the notes pointed to smaller changes in labels, feedback, hierarchy, and comprehension."
+        >
+          <div className="grid gap-5 md:grid-cols-2">
+            {testingFindings.map((finding) => (
+              <CaseStudyCard key={finding.title} title={finding.title}>
+                <p className="homepage-type-body text-[color:var(--color-muted)]">
+                  {finding.body}
+                </p>
+              </CaseStudyCard>
+            ))}
+          </div>
+
+          <CaseStudyFigure
+            label="Testing evidence"
+            image={testingMatrix}
+            alt="Testing results matrix for the smart app showing task outcomes, observations, and recommendations for core app scenarios."
+            caption="The matrix captured task outcomes, observations, and follow-up decisions around navigation, comprehension, labels, and control clarity before the work continued into implementation."
+            className="max-w-4xl"
+          />
+        </CaseStudySection>
+
+        <CaseStudySection
           eyebrow="Outcome"
           title="A pre-launch product direction moved into implementation"
-          intro="My engagement ended before public launch, so I do not claim post-launch impact. The work moved from discovery into implementation, and the app later shipped after my involvement."
+          intro="My engagement ended before public launch, so I do not claim adoption or business impact. The useful outcome happened earlier: the team moved from a broad connected-car brief into implementation with a clearer product model, tested flows, and artefacts that exposed state logic before build."
         >
           <CaseStudyProse>
             <p>
-              The value of this case study is the product design path: turning
-              an ambiguous connected-EV ecosystem into structured, tested,
-              buildable UX across access, status, charging, climate, controls,
-              and service moments.
+              The case shows how I reduced ambiguity across access, status,
+              charging, climate, controls, and service moments while the car,
+              app, and partner systems were still moving.
             </p>
             <p>
-              The programme reached implementation with a coherent native-app
-              structure, detailed flows, prototypes, and testing inputs that
-              helped the team clarify product behaviour before the experience
-              reached users publicly.
+              The programme reached implementation with a native-app structure,
+              detailed flows, prototypes, and testing inputs that helped the
+              team clarify product behaviour before the experience reached
+              users publicly.
             </p>
             <p>
               Because I was not involved after release, this page intentionally
@@ -322,13 +497,6 @@ export default function SmartConnectedCarAppPage() {
             </p>
           </CaseStudyProse>
 
-          <CaseStudyFigure
-            label="Testing evidence"
-            image={testingMatrix}
-            alt="Testing results matrix for the smart app showing task outcomes, observations, and recommendations for core app scenarios."
-            caption="The testing synthesis converted observed task outcomes into follow-up decisions around navigation, comprehension, and control clarity before the work continued into implementation."
-            className="max-w-4xl"
-          />
         </CaseStudySection>
 
         <CaseStudyFigure
