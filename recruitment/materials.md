@@ -18,6 +18,7 @@ Reusable messaging, interview framing, recruiter questions, and portfolio review
 
 | Company | Role | Material | Status | Source / File | Next action |
 |---|---|---|---|---|---|
+| Cleo | Principal Product Designer / Lead Product Designer | Portfolio review framing / Phoenix deck emphasis | Archived | `recruitment/phoenix-slide-manuscript.md` | Stop tailoring for this process; revisit only if a materially better-fit Cleo role appears. |
 
 ## Reusable Message Blocks
 

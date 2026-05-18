@@ -22,7 +22,6 @@ Imported ChatGPT context may use approximate dates such as `Around 2026-05-04` o
 
 | Company | Role | Status | Priority | Last update | Next action | Due | Links / Notes |
 |---|---|---|---|---|---|---|---|
-| Cleo | Principal Product Designer / Lead Product Designer | Recruiter screen | P1 | Around 2026-05-07 | Clarify exact role title, level, location constraints, work setup, and work authorization constraints if follow-up is appropriate. |  | UK-centric role context; Berlin eligibility needs confirmation. First recruiter/design-team screen recorded in prior ChatGPT context. Sources: `inbox/chatgpt/2026-05-08-001-recruitment-tracker.md`, `company-prioritisation.md`. |
 | Anthropic | Product Designer, Claude Code | Applied | P0 | Around 2026-05-04 | Wait for response or plan targeted follow-up if a contact exists. |  | US role in San Francisco, New York City, or Seattle; relocation would be required if process moves forward. See `company-prioritisation.md` for P0 rationale. |
 | Mistral AI | Product Designer, Mistral Cloud | Applied | P0 | Around 2026-05-04 to 2026-05-06 | Wait for response; if contacted, clarify product area, city expectations, and founding-design-team scope. |  | Paris / London, on-site. Exact application date needs confirmation. See `company-prioritisation.md` for P0 rationale. |
 | Parloa | Staff Product Designer, Consumer Experience | Applied | P1 | Before 2026-05-08 | Confirm whether application is submitted and whether there is an active recruiter/process. |  | Berlin office context. Status imported from prior context but needs confirmation. |
@@ -60,7 +59,6 @@ These are the highest-risk uncertainties from the ChatGPT imports so far.
 
 | Item | Confirmation needed | Why it matters |
 |---|---|---|
-| Cleo | Exact role title, current stage, location eligibility, and whether a next step is pending. | Avoid tailoring materials to the wrong level or work setup. |
 | Parloa | Whether application was submitted and whether there is an active process. | Status may be overstated. |
 | ElevenLabs | Exact role title, level, location, and application date. | Needed before tailored follow-up or company note. |
 | Linear | Exact role title/location and application date. | Needed before tailored follow-up or company note. |
@@ -82,6 +80,7 @@ Move items here when they are no longer active. Keep the reason short so pattern
 
 | Company | Role | Final status | Closed date | Reason | Notes |
 |---|---|---|---|---|---|
+| Cleo | Principal Product Designer / Lead Product Designer | Rejected | 2026-05-12 | Rejected after prior recruiter screen. | Exact role title was imported as Principal / Lead and remains unconfirmed; no further action unless a materially better-fit Cleo role appears. |
 | Intercom | Principal Product Designer | Rejected | Around 2026-05-08 | Rejected from Principal role. | Separate Staff Designer / Staff Product Designer application is now active. |
 | Synthesia | Product Designer, Growth / Staff-Principal level | Rejected | Around 2026-05-04 | Rejected. | London relocation was noted as required or likely. Exact role title/level needs confirmation. |
 | n8n | Senior/Staff Product Designer | Rejected | Before 2026-05-08 | Rejected. | Exact rejection date and location/work setup were not retained in imported context. |

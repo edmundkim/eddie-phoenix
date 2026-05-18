@@ -21,7 +21,7 @@ Use these criteria when ranking a company or role:
 | Priority | Companies | Why they sit there | Refresh before acting |
 |---|---|---|---|
 | P0 | Anthropic, Mistral AI, Harvey | Highest AI/career-signal upside if role scope and logistics work. | Current openings, location, visa, compensation/equity, design maturity, true level. |
-| P1 | Cleo, Intercom Staff, ElevenLabs, Linear, Parloa, Glean, Dust, Langdock, Legora, DeepL | Strong targets with credible AI, craft, enterprise, or product-systems fit, but more role-specific uncertainty. | Role scope, location, design influence, compensation, current hiring status. |
+| P1 | Intercom Staff, ElevenLabs, Linear, Parloa, Glean, Dust, Langdock, Legora, DeepL | Strong targets with credible AI, craft, enterprise, or product-systems fit, but more role-specific uncertainty. | Role scope, location, design influence, compensation, current hiring status. |
 | P2 | Booking.com, Zalando, GetYourGuide, Adyen, Personio, Lovable | Useful targets if a specific Staff/Principal role has clear AI/search/platform/product-systems scope. | Whether the role beats current baseline enough to justify effort or relocation. |
 | P3 | Q4 | Lower fit unless a substantially stronger role appears. | Only revisit if role scope, compensation, or product signal changes materially. |
 | Not ranked here | Remote, Zest Search | Present in the first tracker import, but not covered by this prioritisation extraction. | Revalidate from current openings before treating them as meaningful targets. |
@@ -35,7 +35,6 @@ Treat `developer tooling`, `enterprise AI`, and `technical UX` as positioning br
 | Anthropic | P0 | AI design leadership, technical UX, developer tooling, product systems, high-craft product design | US relocation, extreme hiring bar, developer-tooling evidence may need strengthening. |
 | Mistral AI | P0 | AI design leadership, technical UX, developer tooling, enterprise AI, product systems | Paris/London expectations, role may be narrow depending on team. |
 | Harvey | P0 | AI design leadership, enterprise AI, technical UX, product systems | US relocation and legal-domain ramp-up. |
-| Cleo | P1 | AI design leadership, growth/product strategy, cross-platform product design | Role level, UK/London constraints, and fintech fit need validation. |
 | Intercom Staff | P1 | AI design leadership, enterprise AI, product systems | Prior Principal rejection means reapplication/outreach should be careful. |
 | ElevenLabs | P1 | AI design leadership, technical UX, product systems, growth/product strategy | Specific role scope and location are still unclear. |
 | Linear | P1 | Product systems, technical UX, high-craft product design, developer tooling | Less AI-native; portfolio needs to show sharp interface/product taste. |
@@ -57,6 +56,7 @@ Treat `developer tooling`, `enterprise AI`, and `technical UX` as positioning br
 
 | Company / role | Current status | How to treat it |
 |---|---|---|
+| Cleo Principal Product Designer / Lead Product Designer | Rejected | Archive for now. Reconsider only if a materially different role appears and level, location, and work-authorization constraints are clearly resolved. |
 | Intercom Principal Product Designer | Rejected | Keep separate from Intercom Staff. The Staff role may still be worth considering if the scope and team are different, but outreach should be careful. |
 | Synthesia | Rejected | Archive for now. Reconsider only if a materially better-fit senior role appears with strong scope, compensation, and location feasibility. |
 | n8n | Rejected | Archive for now. Reconsider only if a role clearly maps to Staff/Principal scope and technical UX / AI workflow strengths. |
