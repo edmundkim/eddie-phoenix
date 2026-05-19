@@ -36,6 +36,22 @@ const experienceRows: ExperienceRow[] = [
   },
 ];
 
+const clientNames = [
+  "BMW",
+  "Mercedes-Benz Group",
+  "smart",
+  "Genesis Motors",
+  "TELUS",
+  "Questrade",
+  "James Hardie",
+  "Spotify",
+  "Rakuten Kobo",
+  "Nestlé",
+  "Aviva Insurance",
+  "The Well Toronto",
+  "Rogers Communications",
+];
+
 export default function Experience() {
   return (
     <HomepageSection
@@ -81,6 +97,27 @@ export default function Experience() {
             </div>
           </HomepageTextReveal>
         ))}
+
+        <HomepageTextReveal delay={`${80 + experienceRows.length * 90}ms`}>
+          <div className="border-t border-[color:var(--color-line)] pt-8">
+            <p className="homepage-type-utility text-[color:var(--secondary-text)]">
+              I&apos;ve worked with
+            </p>
+            <ul
+              aria-label="Clients Eddie has worked with"
+              className="m-0 mt-4 flex max-w-3xl list-none flex-wrap gap-x-4 gap-y-2 p-0"
+            >
+              {clientNames.map((client) => (
+                <li
+                  key={client}
+                  className="homepage-type-metadata text-[color:var(--color-muted)]"
+                >
+                  {client}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </HomepageTextReveal>
       </div>
     </HomepageSection>
   );
