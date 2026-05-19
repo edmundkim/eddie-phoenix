@@ -190,7 +190,7 @@ export const projectCta = "Open project";
 
 export const speakingTopics: SpeakingTopic[] = [
   {
-    title: "UXDX Berlin panel at SAP",
+    title: "AI and Design UXDX Panel at SAP",
     description:
       "Panel discussion on how AI is reshaping design practice, collaboration, and productivity, with perspectives from senior leaders across design, consulting, and customer engagement.",
     imageSrc: "/speaking/uxdx-berlin-sap-panel-close.jpg",
@@ -198,7 +198,7 @@ export const speakingTopics: SpeakingTopic[] = [
       "Eddie Kim speaking on a UXDX Berlin panel hosted at SAP about AI, collaboration, and creativity.",
   },
   {
-    title: "Beyond Human-Centred Design",
+    title: "Beyond Human-Centred Design at Hatch Berlin Conference",
     description:
       "Workshop for senior designers on looking beyond narrow user-centred optimisation to consider longer-term outcomes, system effects, and the wider impact of design decisions.",
     imageSrc: "/speaking/beyond-human-centred-design-workshop.jpg",
@@ -206,9 +206,10 @@ export const speakingTopics: SpeakingTopic[] = [
       "Workshop participants discussing and mapping ideas during the Beyond Human-Centred Design session.",
   },
   {
-    title: "University panels on AI and the future of work",
+    title:
+      "Panel on AI and the future of work at University of Europe for Applied Sciences",
     description:
-      "Panel talks for students and early-career professionals on how AI is changing product design, technology, and the future of work, alongside speakers from design, data, and engineering.",
+      "Panel talks at University of Europe for Applied Sciences (UE) and GISMA for students and early-career professionals on how AI is changing product design, technology, and the future of work.",
     imageSrc: "/speaking/ue-innovation-hub-panel-close.jpg",
     imageAlt:
       "Eddie Kim speaking on a university innovation hub panel about AI and the future of work.",
