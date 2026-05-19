@@ -24,18 +24,17 @@ export default function About() {
               id="about-heading"
               className="homepage-type-section-heading"
             >
-              I help teams turn ambiguous product systems into clearer user
-              decisions, then carry that work into what ships.
+              I bring calm and clarity to product work when the path is messy.
             </h2>
           </HomepageTextReveal>
 
           <HomepageTextReveal delay="160ms">
             <p className="homepage-type-subhead text-[color:var(--color-muted)]">
-              I frame product direction where user needs, business constraints,
-              and technical limits meet. At AutoScout24, that has meant
-              restructuring search taxonomy, testing filter and list-card
-              patterns, aligning platform tradeoffs, and setting standards for
-              AI behavior before teams scale the work.
+              At AutoScout24, I shape the consumer journey: how people explore
+              options, narrow choices, compare results, and understand
+              AI-supported experiences. I connect user needs, business
+              constraints, and platform limits, then help teams test the pattern
+              and carry it into the product.
             </p>
           </HomepageTextReveal>
         </div>
