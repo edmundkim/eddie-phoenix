@@ -42,14 +42,14 @@ const clientNames = [
   "smart",
   "Genesis Motors",
   "TELUS",
-  "Questrade",
-  "James Hardie",
+  "Nestlé",
+  "Rogers Communications",
   "Spotify",
   "Rakuten Kobo",
-  "Nestlé",
   "Aviva Insurance",
   "The Well Toronto",
-  "Rogers Communications",
+  "Questrade",
+  "James Hardie",
 ];
 
 export default function Experience() {
